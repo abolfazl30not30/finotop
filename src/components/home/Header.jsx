@@ -7,7 +7,7 @@ export default function Header() {
     console.log("createDataHandler")
   }
   return (
-    <div className='bgHeader h-[30rem]'>
+    <div className='bgHeader '>
       <div className='px-[10rem] py-[7rem] flex flex-col gap-4'>
           <div>
             <h2 className='text-5xl font-bold text-[#0141AC]'>

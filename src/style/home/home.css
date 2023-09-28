@@ -5,14 +5,9 @@
     padding-bottom: 4px;
    
 }
-.header-background{
-    
-    width:100%;
-    
-}
+
 .bgHeader{
     background-image: url("../../../public/images/Group\ 594.svg");
     background-repeat: no-repeat;
-    margin-left:7rem;
     
 }
