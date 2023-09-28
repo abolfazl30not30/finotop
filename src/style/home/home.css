@@ -1,0 +1,18 @@
+.activeNavLink{
+    color: black !important;
+    font-weight: 900;
+    border-bottom: 2px solid #367AFF;
+    padding-bottom: 4px;
+   
+}
+.header-background{
+    
+    width:100%;
+    
+}
+.bgHeader{
+    background-image: url("../../../public/images/Group\ 594.svg");
+    background-repeat: no-repeat;
+    margin-left:7rem;
+    
+}
