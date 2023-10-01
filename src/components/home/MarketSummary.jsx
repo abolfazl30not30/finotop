@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function MarketSummary() {
   return (
-    <div className='flex gap-8 mt-8 justify-between mx-36'>
+    <div className='flex gap-8 mt-24 mb-12 justify-between mx-36'>
       <div className='flex flex-col justify-between shadow-xl shadow-[#b0b0b040] rounded-2xl px-4 py-8 w-1/5'>
         <div className='bg-[#0141AC] rounded-3xl text-white flex justify-center items-center px-4 py-3 font-semibold'>
             <p>خلاصه بازار</p>
