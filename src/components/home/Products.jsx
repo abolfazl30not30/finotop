@@ -18,7 +18,7 @@ export default function Products() {
         <ProductCard/>
         <ProductCard/>
       </div>
-      <div className='px-8 bg-white  bgCandle rounded-3xl'>
+      <div className='px-8 bg-white bgCandle rounded-3xl'>
         <div className='space-y-4 p-8 '>
           <div className='flex gap-2'>
             <div className='w-[2%] '>
