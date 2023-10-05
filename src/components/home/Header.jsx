@@ -7,15 +7,15 @@ export default function Header() {
     console.log("createDataHandler")
   }
   return (
-    <div className='bgHeader '>
-      <div className='px-[10rem] py-[7rem] flex flex-col gap-4'>
+    <div className='bgHeader'>
+      <div className='2xl:px-[10rem] xl:px-[6rem] lg:px-[4rem] md:px-[3rem] 2xl:py-[6rem] xl:py-[5rem] lg:py-[3rem] md:py-[2rem] p-[3rem] flex flex-col gap-4'>
           <div>
-            <h2 className='text-5xl font-bold text-[#0141AC]'>
+            <h2 className='xl:text-5xl text-4xl font-bold text-[#0141AC]'>
               پلتفرم تحلیل بازار معاملات
             </h2>
           </div>
           <div>
-            <h3 className='text-4xl font-bold text-[#07A0E6]'>
+            <h3 className='xl:text-4xl text-3xl font-bold text-[#07A0E6]'>
               دقیق ترین اطلاعات در دست شماست
             </h3>
           </div>

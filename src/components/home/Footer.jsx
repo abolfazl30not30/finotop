@@ -16,7 +16,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className='mt-24 bg-[#0141AC] '>
-        <div className='flex items-center justify-between gap-12 text-white py-10 px-32'>
+        <div className='flex md:flex-row flex-col items-center justify-between gap-12 text-white py-10 md:px-32 px-8'>
             <div className=''>
                 <div>
                     <p>logo here</p>
@@ -29,13 +29,13 @@ export default function Footer() {
                     </p>
                 </div>
                 <div>
-                    <p className='text-lg font-semibold'>
+                    <p className='md:text-lg text-sm font-semibold'>
                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ 
                     </p>
                 </div>
             </div>
         </div>
-        <div className='flex px-10 py-6 justify-between gap-2 items-center bg-[#F1F1F1] rounded-2xl mx-32'>
+        <div className='flex md:flex-row flex-col px-8 md:py-6 p-4 justify-between gap-2 items-center bg-[#F1F1F1] rounded-2xl md:mx-32 mx-8'>
             <div>
                 <p className='text-[#0141AC] text-lg font-semibold leading-8'>
                     شبکه های اجتماعی :
@@ -114,7 +114,7 @@ export default function Footer() {
 
             </div>
         </div>
-        <div className=' flex justify-between gap-4 px-32 text-white my-8'>
+        <div className=' grid grid-col 2xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2  justify-between gap-4 md:px-32 px-12 text-white my-8'>
         <div className="">
                         <h3 className=" font-bold ">بازار</h3>
                         <div className="mt-5  space-y-3">
@@ -182,7 +182,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="">
-                        <h3 className=" font-bold ">بازار</h3>
+                        <h3 className=" font-bold md:mt-0 mt-8 ">ابزارها</h3>
                         <div className="mt-5  space-y-3">
                             <div className="flex items-center gap-2 ">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
@@ -200,7 +200,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="">
-                        <h3 className=" font-bold ">بیشتر</h3>
+                        <h3 className=" font-bold lg:mt-0 mt-8">بیشتر</h3>
                         <div className="mt-5  space-y-3">
                             <div className="flex items-center gap-2 ">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
@@ -224,18 +224,18 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="">
-                        <h3 className=" font-bold ">راه ارتباطی با ما</h3>
+                    <div className="  col-span-2 2xl:col-span-1">
+                        <h3 className=" font-bold 2xl:mt-0 mt-8 ">راه ارتباطی با ما</h3>
                         <div className="mt-5  space-y-6">
                             <div className='flex items-center gap-1 '>
                                 <PiPhoneCallLight className='text-xl'/>
-                                <h3 className="  text-[0.9rem] font-bold"> تلفن :</h3>
-                                <a href="" className="text-white text-[0.9rem]">021-12345678</a>
+                                <h3 className="  text-[0.9rem] 2xl:text-sm font-bold"> تلفن :</h3>
+                                <a href="" className="text-white text-[0.9rem] 2xl:text-sm">021-12345678</a>
                             </div>
                             <div className='flex items-center gap-1 '>
                                 <AiOutlineMail className='text-xl'/>
-                                <h3 className="  text-[0.9rem] font-bold">ایمیل :</h3>
-                                <a href="" className="text-white text-[0.9rem]">Info@arzeshpardazyekan.com</a>
+                                <h3 className="  text-[0.9rem] 2xl:text-sm font-bold">ایمیل :</h3>
+                                <a href="" className="text-white text-[0.9rem] 2xl:text-xs">Info@arzeshpardazyekan.com</a>
                             </div>
                             <div className='flex items-center gap-1 '>
                                 <BiLogoInstagram className='text-xl'/>
@@ -244,10 +244,10 @@ export default function Footer() {
                             </div>
                             <div className='flex items-center gap-1 '>
                                 <TfiLocationPin className='text-xl'/>
-                                <h3 className="  text-[0.9rem] font-bold"> آدرس :</h3>
-                                <span  className="text-white text-[0.9rem]">ایران-تهران-خیابان-کوچه-پلاک</span>
+                                <h3 className="  text-[0.9rem] font-bold 2xl:text-sm"> آدرس :</h3>
+                                <span  className="text-white text-[0.9rem] 2xl:text-sm">ایران-تهران-خیابان-کوچه-پلاک</span>
                             </div>
-                            <div className='flex gap-2 justify-between'>
+                            <div className='flex gap-2'>
                                 <div className='border border-[#D3D3D3] rounded-2xl'>
                                     <Link href={"/"}>
                                     <div className='flex items-center jsutify-between gap-2 px-2 py-0.5'>
@@ -283,7 +283,7 @@ export default function Footer() {
             
            
         </div>
-        <div className='bg-[#367AFF] text-white text-center text-sm mt-4 py-3'>
+        <div className='bg-[#367AFF] text-white text-center text-xs sm:text-sm mt-4 px-2 py-3'>
             <p className=''>
                 کلیه حقوق مادی و معنوی این سایت برای ارزش  پرداز یکان  محفوظ است.
             </p>
