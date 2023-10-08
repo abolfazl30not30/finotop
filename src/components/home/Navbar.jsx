@@ -19,8 +19,9 @@ function Navbar() {
     }
 
     const pathname = usePathname()
+
     return (
-        <nav className="relative shadow-md shadow-[#c3c0c040] py-1">
+        <nav className="sticky bg-white z-50 top-0 shadow-md shadow-[#c3c0c040] py-1 ">
             <div className=" w-full h-[4.2rem] flex items-center justify-between lg:gap-2 gap-1 lg:px-10 px-5 ">
             <div className="md:hidden">
                     <button onClick={handleToggleNavbar} className="transition-all duration-900">
@@ -42,21 +43,24 @@ function Navbar() {
                     </Link>
                 </div>
                 <div className="2xl:w-[60%] justify-start items-center hidden md:flex">
+                
                     <ul className="flex lg:gap-2 gap-1 md:text-sm lg:text-base">
                         <li><Link href="/" className=" font-bold lg:px-2 px-1 py-2"><span
                             className={pathname === "/" ? "activeNavLink" : "text-[#777777] font-semibold"}> بازار</span></Link></li>
-                        <li><Link href="/Products" className=" font-bold lg:px-2 px-1 py-2"><span
-                            className={pathname === "/Products/" ? "activeNavLink" : "text-[#777777] font-semibold"}>محصولات</span></Link>
+                        <li><a href="#products" className=" font-bold lg:px-2 px-1 py-2"><span
+                            className={pathname === "/products/" ? "activeNavLink" : "text-[#777777] font-semibold"}>محصولات</span></a>
                         </li>
-                        <li><Link href="/Tools" className=" font-bold lg:px-2 px-1 py-2"><span
-                            className={pathname === "/Tools/" ? "activeNavLink" : "text-[#777777] font-semibold"}>ابزارها</span></Link>
+                        <li><a href="#tools" className=" font-bold lg:px-2 px-1 py-2"><span
+                            className={pathname === "/tools/" ? "activeNavLink" : "text-[#777777] font-semibold"}>ابزارها</span></a>
                         </li>
-                        <li><Link href="/More" className=" font-bold lg:px-2 px-1 py-2"><span
-                            className={pathname === "/More/" ? "activeNavLink" : "text-[#777777] font-semibold"}>بیشتر</span></Link>
+                        <li><a href="#aboutus" className=" font-bold lg:px-2 px-1 py-2"><span
+                            className={pathname === "/about-us/" ? "activeNavLink" : "text-[#777777] font-semibold"}>درباره ما</span></a>
                         </li>
-                        <li><Link href="/About-Us" className=" font-bold lg:px-2 px-1 py-2"><span
-                            className={pathname === "/About-Us/" ? "activeNavLink" : "text-[#777777] font-semibold"}>درباره ما</span></Link>
+                        <li><a href="#more" className=" font-bold lg:px-2 px-1 py-2"><span
+                            className={pathname === "/more/" ? "activeNavLink" : "text-[#777777] font-semibold"}>بیشتر</span></a>
                         </li>
+                        
+                        
                         
                         
                         
@@ -100,17 +104,17 @@ function Navbar() {
                     <ul className="flex flex-col">
                         <li className=""><Link href="/" className="font-[200] block p-4 hover:bg-[#1aadf1]" onClick={handleToggleNavbar}><span
                             className={pathname === "/" ? "activeNavLink" : "text-white"}>بازار</span></Link></li>
-                        <li className=""><Link href="/Products" className="font-[200] block p-4 hover:bg-[#1aadf1]" onClick={handleToggleNavbar}><span
-                            className={pathname === "/Products/" ? "activeNavLink" : "text-white"} >محصولات</span></Link>
+                        <li className=""><Link href="/products" className="font-[200] block p-4 hover:bg-[#1aadf1]" onClick={handleToggleNavbar}><span
+                            className={pathname === "/products/" ? "activeNavLink" : "text-white"} >محصولات</span></Link>
                         </li>
-                        <li className=""><Link href="/Tools" className="font-[200] block p-4 hover:bg-[#1aadf1]" onClick={handleToggleNavbar}><span
-                            className={pathname === "/Tools/" ? "activeNavLink" : "text-white"}>ابزارها</span></Link>
+                        <li className=""><Link href="/tools" className="font-[200] block p-4 hover:bg-[#1aadf1]" onClick={handleToggleNavbar}><span
+                            className={pathname === "/tools/" ? "activeNavLink" : "text-white"}>ابزارها</span></Link>
                         </li>
-                        <li className=""><Link href="/More" className="font-[200] block p-4 hover:bg-[#1aadf1]" onClick={handleToggleNavbar}><span
-                            className={pathname === "/More/" ? "activeNavLink" : "text-white"}>بیشتر</span></Link>
+                        <li className=""><Link href="/more" className="font-[200] block p-4 hover:bg-[#1aadf1]" onClick={handleToggleNavbar}><span
+                            className={pathname === "/more/" ? "activeNavLink" : "text-white"}>بیشتر</span></Link>
                         </li>
-                        <li className=""><Link href="/About-Us" className="font-[200] block p-4 hover:bg-[#1aadf1]" onClick={handleToggleNavbar}><span
-                            className={pathname === "/About-Us/" ? "activeNavLink" : "text-white"}>درباره ما</span></Link>
+                        <li className=""><Link href="/about-us" className="font-[200] block p-4 hover:bg-[#1aadf1]" onClick={handleToggleNavbar}><span
+                            className={pathname === "/about-us/" ? "activeNavLink" : "text-white"}>درباره ما</span></Link>
                         </li>
                         
                     </ul>
