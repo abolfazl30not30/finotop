@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import {TiTick} from "react-icons/ti"
 import Image from 'next/image'
 
 export default function Header() {

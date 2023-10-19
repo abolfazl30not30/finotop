@@ -157,7 +157,7 @@ function Navbar() {
                         </form>
                     </div>
                     <div>
-                        <Link href="/"><button className="bg-[#367AFF] flex justify-center items-center gap-2  hover:bg-[#401fac] text-white  lg:px-4 px-3 py-2 rounded-full"><div className="text-2xl"><RiUserAddLine/></div><div className="font-semibold text-xs">ورود/عضویت</div></button></Link>
+                        <Link href="/dashboard"><button className="bg-[#367AFF] flex justify-center items-center gap-2  hover:bg-[#401fac] text-white  lg:px-4 px-3 py-2 rounded-full"><div className="text-2xl"><RiUserAddLine/></div><div className="font-semibold text-xs">ورود/عضویت</div></button></Link>
                     </div>
                 </div>
                 <div className="sm:hidden flex justify-between gap-2 items-center text-[#07A0E6] text-2xl ">
