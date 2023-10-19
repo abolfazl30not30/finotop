@@ -4,10 +4,10 @@ import Header from "@/components/dashboard/Header";
 
 export default function Dashboard({ children }) {
   return (
-    <div className="flex flex-column" dir="rtl">
+    <div className=" bg-[#FBFBFB] main" dir="rtl">
       <Sidebar />
       <Header />
-      <div className="main">{children}</div>
+      <div className="">{children}</div>
     </div>
   );
 }

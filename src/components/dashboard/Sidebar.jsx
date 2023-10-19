@@ -9,15 +9,12 @@ import {TiChartLine} from "react-icons/ti"
 import {CgClose} from "react-icons/cg"
 import '../../style/dashboard/dashboard.css'
 export default function Sidebar() {
-    const closeSidebar = () => {
-        let sidebar = document.querySelector("#sidebar");
-        sidebar.classList.toggle("close");
-    }
+   
 
     return (
         <>
             <div className='sidebar-dashboard' id='sidebar'>
-                <div id='close_sidebar_mobile' onClick={closeSidebar}>
+                <div id='close_sidebar_mobile' >
                     <CgClose className="mx-6 text-xl"/>
                 </div>
                 <div className="logo my-4 mx-2">
@@ -30,7 +27,7 @@ export default function Sidebar() {
 
                 </div>
                 <div className="sidebar-list mt-4">
-                    <Link onClick={closeSidebar} href="/admin/dashboard/add-company" className='w-100'>
+                    <Link  href="/dashboard" className='w-100'>
                         <div className="flex flex-row items-center sidebar-list-item border-b border-[#F1F1F1]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 16 17" strokeWidth={0.8}
                                  stroke="currentColor"  className=" sidebar-list-item-icon" >
@@ -46,7 +43,7 @@ export default function Sidebar() {
                             </div>
                         </div>
                     </Link>
-                    <Link onClick={closeSidebar} href="/admin/dashboard/massage" className='w-100'>
+                    <Link  href="/dashboard/symbol" className='w-100'>
                         <div className="flex flex-row items-center sidebar-list-item border-b border-[#F1F1F1]">
                            <TiChartLine className="w-6 h-6  sidebar-list-item-icon"/>
                             <div className="sidebar-list-item-title">
@@ -54,7 +51,7 @@ export default function Sidebar() {
                             </div>
                         </div>
                     </Link>
-                    <Link onClick={closeSidebar} href="/admin/dashboard/massage" className='w-100'>
+                    <Link  href="/dashboard" className='w-100'>
                         <div className="flex flex-row items-center sidebar-list-item border-b border-[#F1F1F1]">
                            <BiUser className="w-6 h-6  sidebar-list-item-icon "/>
                             <div className="sidebar-list-item-title">
@@ -62,7 +59,7 @@ export default function Sidebar() {
                             </div>
                         </div>
                     </Link>
-                    <Link onClick={closeSidebar} href="/admin/dashboard/massage" className='w-100'>
+                    <Link  href="/dashboard" className='w-100'>
                         <div className="flex flex-row items-center sidebar-list-item border-b border-[#F1F1F1]">
                            <LuSettings className="w-6 h-6  sidebar-list-item-icon"/>
                             <div className="sidebar-list-item-title">

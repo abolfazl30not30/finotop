@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Properties() {
   return (
-    <div id='aboutus' className='py-12'>
+    <div id='properties' className='py-12'>
         <div className='text-[#0141AC] font-bold text-3xl text-center mt-16' >
             <p>
                 ویژگی های ما

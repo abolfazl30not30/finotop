@@ -3,10 +3,27 @@ import React from 'react'
 import {HiOutlineRefresh} from "react-icons/hi"
 import {AiOutlinePlusCircle} from "react-icons/ai"
 import SwitchSelector from "react-switch-selector";
+import { useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeSymbolSearch } from '@/store/slices/symbolSearchSlice';
 
 
    
 export default function SymbolTable() {
+    const symbolSearch=useSelector((store)=>store.symbolSearch.value)
+    const dispatch=useDispatch()
+    const enterKeyHandler = (event) =>{
+        if(event.keyCode===13){
+            event.preventDefault()
+        }
+
+    }
+    
+    const symbolRef=useRef(null)
+    
+    
+    
+   
     const options = [
         {
           label: "50",
@@ -31,15 +48,15 @@ export default function SymbolTable() {
   return (
     <div className='bg-white rounded-2xl px-4 py-3'>
         <div className='flex justify-between  gap-2'>
-            <div className='space-y-8'>
+            <div className='space-y-8 w-1/4'>
                <div className='flex gap-2 items-center'>
                 <div className='text-[#0141AC] font-bold'>
                     <p>
-                        نماد
+                        {symbolSearch || "نماد"}
                     </p>
                 </div>
                 <div>
-                    <div dir='ltr' className='h-8 w-16'>
+                    <div dir='ltr' className='h-8 w-16 '>
                         <SwitchSelector
                             onChange={onChange}
                             options={options}
@@ -55,17 +72,17 @@ export default function SymbolTable() {
                     <form className="">   
                         <div className="relative flex  justify-center items-center ">
                             <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label> 
-                            <input type="search" id="default-search" className="block w-full p-2 text-sm text-gray-900 placeholder:text-[#777] rounded bg-[#F8F8F8]" placeholder="نماد خود را وارد کنید ....." />
+                            <input ref={symbolRef} onKeyDown={enterKeyHandler}  type="search" id="default-search" className="block w-full p-2 text-sm text-gray-900 placeholder:text-[#777] rounded bg-[#F8F8F8]" placeholder="نماد خود را وارد کنید ....." />
                             <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                                 
                             </div>       
                         </div>
                     </form>
                 </div>
-                <button className='text-[#367AFF] text-3xl'>
+                <button onClick={()=> symbolRef.current.value=""} className='text-[#367AFF] text-3xl'>
                     <HiOutlineRefresh/>
                 </button>
-                <button className='text-[#777] text-3xl'>
+                <button onClick={()=>{dispatch(changeSymbolSearch(symbolRef.current.value)) ; symbolRef.current.value=""}}  className='text-[#777] text-3xl'>
                     <AiOutlinePlusCircle/>
                 </button>
 
@@ -90,7 +107,7 @@ export default function SymbolTable() {
                </div>
 
             </div>
-            <div>
+            <div className='w-3/5'>
                 <table className="w-full text-sm text-center border-spacing-y-3 border-separate">
                     <thead className="text-sm text-white font-semibold ">
                         <tr className='text-[#0141AC] border border-[#D3B9DC] '>

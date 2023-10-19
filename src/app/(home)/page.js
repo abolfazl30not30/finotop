@@ -3,7 +3,7 @@ import MarketSummary from "@/components/home/MarketSummary";
 import Navbar from "@/components/home/Navbar";
 import Products from "@/components/home/Products";
 import Tools from "@/components/home/Tools";
-import Counter from "@/components/home/Counter";
+
 import Notes from "@/components/home/Notes";
 import Contact from "@/components/home/Contact";
 import Properties from "@/components/home/Properties";
@@ -16,7 +16,7 @@ export default function Home() {
       <MarketSummary />
       <Products />
       <Tools />
-      <Counter />
+
       <Notes />
       <Contact />
       <Properties />

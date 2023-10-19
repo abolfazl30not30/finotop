@@ -16,22 +16,22 @@ export default function Derivative() {
           </div>
           <div>
             <p className='text-right sm:text-2xl text-xl font-bold  text-[#FF9C35]'>
-               هرچه از چارت برای تحلیل نیازدارید 
+                اختیار معامله، هرچه از آپشن های بازار میخواهید
             </p>
           </div>
           <div>
             <p className='text-[#777] sm:text-xl '>
-              واچ لیست خودت را بساز 
+                قرارداد آتی، اطلاعات لازم برای حرفه ای های بازار       
             </p>
           </div>
           <div className='grid md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5  grid-cols-2 justify-between lg:gap-16 xl:gap-10 md:gap-10 sm:gap-8 gap-4'>
-          <div className='bgWatchList  space-y-4 flex flex-col justify-center items-center'>
+          <div className='bgWatchList  space-y-4 flex flex-col  items-center'>
         <div className='inline-flex   top-0 justify-center items-center sm:w-2/5 md:w-1/2  w-3/5  bg-white rounded-b'>
             <Image className='w-full px-6 py-1.5 ' src={"/images/Frame.svg"} height={0} width={0} alt='watch list'/>
         </div>
         <div>
             <p className='text-center mt-4 text-sm leading-5 text-[#777] font-bold px-3'>
-                همه چیو با هم ببین! 
+                استراتژی های مختلف پوشش ریسک 
             </p>
         </div>
         <div className=''>
@@ -47,7 +47,7 @@ export default function Derivative() {
         </div>
         <div className=''>
             <p className='text-center mt-4  text-sm leading-5 text-[#777] font-bold px-3'>
-                همه چیو با هم ببین! 
+                زنجیره آپشن ها   
             </p>
         </div>
         <div className=''>
@@ -63,13 +63,12 @@ export default function Derivative() {
         </div>
         <div>
             <p className='text-center  mt-4 text-sm leading-5 text-[#777] font-bold px-3'>
-            دیتای ثانیه ای 
+                اطلاعات کامل هر قرارداد 
             </p>
         </div>
         <div className=''>
             <p className='text-center text-sm leading-5 text-[#777] mb-4 px-3'> 
-              تیک دیتای بازار در دستان شما، نمودار عمق بازار و هرچی لحظه ای برای
-              تحلیلت میخوای
+                تاریخچه موقعیت های باز، دارایی پایه، قیمت گذاری 
             </p>
         </div>
     </div>
@@ -79,7 +78,7 @@ export default function Derivative() {
         </div>
         <div>
             <p className='text-center  mt-4 text-sm leading-5 text-[#777] font-bold px-3'>
-                 دقیق ترین دیتای بازار سرمایه
+                اولین مرجع قرارداد های آتی در بازار سرمایه ایران
             </p>
         </div>
         <div className=''>
@@ -94,7 +93,7 @@ export default function Derivative() {
         </div>
         <div>
             <p className='text-center  mt-4 text-sm leading-5 text-[#777] font-bold px-3'>
-               کنترل لحظه ای بازار 
+                استراتژی های ترکیبی مشتقه
             </p>
         </div>
         <div className=''>

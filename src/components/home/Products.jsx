@@ -3,7 +3,6 @@ import React from 'react'
 import Image from 'next/image'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { useState } from 'react';
 import "slick-carousel/slick/slick-theme.css";
 import Camodity from '../Products/Camodity';
 import Derivative from '../Products/Derivative';
@@ -12,8 +11,14 @@ import MegaCodal from '../Products/MegaCodal';
 import MegaHolder from '../Products/MegaHolder';
 import SafeBox from '../Products/SafeBox';
 import Scriner from '../Products/Scriner';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeProduct } from '@/store/slices/productSlice';
+
+
 
 export default function Products() {
+    const product=useSelector((store)=>store.product.value)
+    const dispatch=useDispatch()
   const settings = {
     dots: false,
     className: "center",
@@ -61,41 +66,18 @@ export default function Products() {
         }
     ]
   };
-   const [product,setProduct]=useState(<MegaChart/>)
-  const ProductHandler=(id)=>{
-    switch(id){
-        case "megachart":
-            setProduct(<MegaChart/>)
-            break;
-        case "megaholder":
-            setProduct(<MegaHolder/>)
-            break;
-        case "safebox":
-            setProduct(<SafeBox/>)
-            break;
-        case "megacodal":
-            setProduct(<MegaCodal/>)
-            break;
-        case "derivative":
-            setProduct(<Derivative/>)
-            break;
-        case "camodity":
-            setProduct(<Camodity/>)
-             break;
-        case "scriner":
-            setProduct(<Scriner/>)
-            break;
-    }
-  }
+  
+
   return (
+    
     <div className='bg-[#F8F8F8] pt-24 pb-8 space-y-16 px-8 sm:px-16 lg:px-32 md:px-24 ' id='products'>
       <div>
         <h2 className='text-[#0141AC] text-2xl sm:text-4xl font-bold text-center '>محصولات ارزش پرداز یکان</h2>
       </div>
-      <div className=' gap-2 mx-auto '>
+      <div className=' gap-2 mx-auto ' dir='rtl'>
       <Slider {...settings} className=''>
-      <button onClick={()=>{ProductHandler("megachart")}} className='scale-90 rounded-3xl ' >
-      <div className='rounded-3xl bgProduct flex flex-col items-center justify-center  md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
+      <button onClick={()=>dispatch(changeProduct(<MegaChart/>))} className={product.type.name === "MegaChart" ? "bgProductClick":"bgProduct"  }  >
+      <div className='rounded-3xl  flex flex-col items-center justify-center  md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
         <div className='w-1/2 flex justify-center mx-auto '>
             <Image className='w-full ' src={"/images/capa_1.svg"} height={0} width={0} alt='product'/>    
         </div>
@@ -106,8 +88,8 @@ export default function Products() {
         </div>
     </div>
       </button>
-    <button onClick={()=>{ProductHandler("megacodal")}} className='scale-90 rounded-3xl'>
-    <div className='rounded-3xl bgProduct flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
+    <button onClick={()=>dispatch(changeProduct(<MegaCodal/>))} className={product.type.name === "MegaCodal" ? "bgProductClick" : "bgProduct"}>
+    <div className='rounded-3xl  flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
         <div className='w-1/2 flex justify-center mx-auto'>
             <Image className='w-full ' src={"/images/Capa_15.svg"} height={0} width={0} alt='product'/>    
         </div>
@@ -119,8 +101,8 @@ export default function Products() {
 
     </div>
     </button>
-    <button onClick={()=>{ProductHandler("safebox")}} className='scale-90 rounded-3xl' >
-    <div className='rounded-3xl bgProduct flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
+    <button onClick={()=>dispatch(changeProduct(<SafeBox/>))} className={product.type.name === "SafeBox" ? "bgProductClick" : "bgProduct"}>
+    <div className='rounded-3xl  flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
         <div className='w-1/2 flex justify-center mx-auto'>
             <Image className='w-full ' src={"/images/layer_7.svg"} height={0} width={0} alt='product'/>    
         </div>
@@ -132,8 +114,8 @@ export default function Products() {
 
     </div>
     </button>
-    <button onClick={()=>{ProductHandler("megaholder")}} className='scale-90 rounded-3xl' >
-    <div className='rounded-3xl bgProduct flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
+    <button onClick={()=>dispatch(changeProduct(<MegaHolder/>))} className={product.type.name === "MegaHolder" ? "bgProductClick" : "bgProduct"} >
+    <div className='rounded-3xl  flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
         <div className='w-1/2 flex justify-center mx-auto'>
             <Image className='w-full ' src={"/images/Group 6.svg"} height={0} width={0} alt='product'/>    
         </div>
@@ -145,8 +127,8 @@ export default function Products() {
 
     </div>
     </button>
-    <button onClick={()=>{ProductHandler("derivative")}} className='scale-90 rounded-3xl' >
-    <div className='rounded-3xl bgProduct flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
+    <button onClick={()=>dispatch(changeProduct(<Derivative/>))} className={product.type.name === "Derivative" ? "bgProductClick" : "bgProduct"} >
+    <div className='rounded-3xl  flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
         <div className='w-1/2 flex justify-center mx-auto'>
             <Image className='w-full ' src={"/images/Capa_16.svg"} height={0} width={0} alt='product'/>    
         </div>
@@ -158,8 +140,8 @@ export default function Products() {
 
     </div>
     </button>
-    <button onClick={()=>{ProductHandler("camodity")}} className='scale-90 rounded-3xl' >
-    <div className='rounded-3xl bgProduct flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
+    <button onClick={()=>dispatch(changeProduct(<Camodity/>))} className={product.type.name === "Camodity" ? "bgProductClick" : "bgProduct"} >
+    <div className='rounded-3xl  flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
         <div className='w-1/2 flex justify-center mx-auto'>
             <Image className='w-full ' src={"/images/Line_Expand2.svg"} height={0} width={0} alt='product'/>    
         </div>
@@ -171,8 +153,8 @@ export default function Products() {
 
     </div>
     </button>
-    <button onClick={()=>{ProductHandler("scriner")}} className='scale-90 rounded-3x'>
-    <div className='rounded-3xl bgProduct flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
+    <button onClick={()=>dispatch(changeProduct(<Scriner/>))} className={product.type.name === "Scriner" ? "bgProductClick" : "bgProduct"}>
+    <div className='rounded-3xl  flex flex-col items-center justify-center md:px-4 lg:px-6 px-8 sm:px-4 py-6 space-y-4 '>
         <div className='w-1/2 flex justify-center mx-auto'>
             <Image className='w-full ' src={"/images/icon_5990150_edited (2) 2.svg"} height={0} width={0} alt='product'/>    
         </div>
@@ -186,10 +168,7 @@ export default function Products() {
     </button>
     </Slider>
       </div>
-    
-      {product}
-      
-
+        {product }
     </div>
   )
 }

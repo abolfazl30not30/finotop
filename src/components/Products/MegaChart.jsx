@@ -25,7 +25,7 @@ export default function MegaChart() {
             </p>
           </div>
           <div className='grid md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5  grid-cols-2 justify-between lg:gap-16 xl:gap-10 md:gap-10 sm:gap-8 gap-4'>
-          <div className='bgWatchList  space-y-4 flex flex-col justify-center items-center'>
+          <div className='bgWatchList  space-y-4 flex flex-col  items-center'>
         <div className='inline-flex   top-0 justify-center items-center sm:w-2/5 md:w-1/2  w-3/5  bg-white rounded-b'>
             <Image className='w-full px-6 py-1.5 ' src={"/images/Frame.svg"} height={0} width={0} alt='watch list'/>
         </div>

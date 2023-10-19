@@ -1,9 +1,11 @@
 import React from "react";
 
+import Symbol from "@/components/dashboard/symbol/Symbol";
+
 export default function page() {
   return (
     <div>
-      <h1>More</h1>
+      <Symbol />
     </div>
   );
 }

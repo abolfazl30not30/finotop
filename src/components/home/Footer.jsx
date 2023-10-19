@@ -18,9 +18,9 @@ export default function Footer() {
     <footer className='mt-24 bg-[#0141AC] '>
         <div className='flex md:flex-row flex-col items-center justify-between gap-12 text-white py-10 md:px-32 px-8'>
             <div className=''>
-                <div>
+                <Link href="/">
                     <p>logo here</p>
-                </div>
+                </Link>
             </div>
             <div className=' space-y-4  leading-8'>
                 <div>
@@ -41,12 +41,12 @@ export default function Footer() {
                     شبکه های اجتماعی :
                 </p>
             </div>
-            <div className='flex justify-between items-center gap-2 text-[#777777] text-2xl'>
+            <div className='flex justify-between items-center gap-2 text-[#777777]  text-2xl'>
                 <div className=''>
                     <button>
-                        <Link href={""}>
-                          <SlSocialYoutube/>
-                        </Link>
+                        <a href="">
+                          <SlSocialYoutube className='hover:text-[#FF9C35]'/>
+                        </a>
                     </button>
                 </div>
                 <div className='flex '>
@@ -56,9 +56,9 @@ export default function Footer() {
                 </div>
                 <div className=''>
                     <button>
-                        <Link href={""}>
-                          <RxTwitterLogo/>
-                        </Link>
+                        <a href="">
+                          <RxTwitterLogo className='hover:text-[#FF9C35]'/>
+                        </a>
                     </button>
                 </div>
                 <div className=''>
@@ -68,9 +68,9 @@ export default function Footer() {
                 </div>
                 <div className=''>
                     <button>
-                        <Link href={""}>
-                          <FiFacebook/>
-                        </Link>
+                        <a href="">
+                          <FiFacebook className='hover:text-[#FF9C35]'/>
+                        </a>
                     </button>
                 </div>
                 <div className=''>
@@ -80,9 +80,9 @@ export default function Footer() {
                 </div>
                 <div className=''>
                     <button>
-                        <Link href={""}>
-                          <BiLogoInstagram/>
-                        </Link>
+                        <a href="">
+                          <BiLogoInstagram className='hover:text-[#FF9C35]'/>
+                        </a>
                     </button>
                 </div>
                 <div className=''>
@@ -92,9 +92,9 @@ export default function Footer() {
                 </div>
                 <div className=''>
                     <button>
-                        <Link href={""}>
-                          <SlSocialLinkedin/>
-                        </Link>
+                        <a href="">
+                          <SlSocialLinkedin className='hover:text-[#FF9C35]'/>
+                        </a>
                     </button>
                 </div>
                 <div className=''>
@@ -104,9 +104,9 @@ export default function Footer() {
                 </div>
                 <div className=''>
                     <button>
-                        <Link href={""}>
-                          <PiWhatsappLogo/>
-                        </Link>
+                        <a href="">
+                          <PiWhatsappLogo className='hover:text-[#FF9C35]'/>
+                        </a>
                     </button>
                 </div>
                 
@@ -153,31 +153,31 @@ export default function Footer() {
                         <div className="mt-5  space-y-3">
                             <div className="flex items-center gap-2 ">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">مگاچارت</Link>
+                                <a href="/#products" className=" text-[1rem] hover:text-[#FF9C35]">مگاچارت</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">بنیادی</Link>
+                                <a href="/#products" className=" text-[1rem] hover:text-[#FF9C35]">بنیادی</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">سهامداران</Link>
+                                <a href="/#products" className=" text-[1rem] hover:text-[#FF9C35]">سهامداران</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]"> صندوق ها</Link>
+                                <a href="/#products" className=" text-[1rem] hover:text-[#FF9C35]"> صندوق ها</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">آپشن</Link>
+                                <a href="/#products" className=" text-[1rem] hover:text-[#FF9C35]">آپشن</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">فیوچرز</Link>
+                                <a href="/#products" className=" text-[1rem] hover:text-[#FF9C35]">فیوچرز</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">اسکرینر</Link>
+                                <a href="/#products" className=" text-[1rem] hover:text-[#FF9C35]">اسکرینر</a>
                             </div>
                         </div>
                     </div>
@@ -186,15 +186,15 @@ export default function Footer() {
                         <div className="mt-5  space-y-3">
                             <div className="flex items-center gap-2 ">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">تقویم اقتصادی</Link>
+                                <a href="/#tools" className=" text-[1rem] hover:text-[#FF9C35]">تقویم اقتصادی</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">دیدبان</Link>
+                                <a href="/#tools" className=" text-[1rem] hover:text-[#FF9C35]">دیدبان</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">آلارم</Link>
+                                <a href="/#tools" className=" text-[1rem] hover:text-[#FF9C35]">آلارم</a>
                             </div>
                             
                         </div>
@@ -204,23 +204,23 @@ export default function Footer() {
                         <div className="mt-5  space-y-3">
                             <div className="flex items-center gap-2 ">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">درباره ما</Link>
+                                <Link href="/about-us" className=" text-[1rem] hover:text-[#FF9C35]">درباره ما</Link>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">تماس با ما</Link>
+                                <Link href="/contact-us" className=" text-[1rem] hover:text-[#FF9C35]">تماس با ما</Link>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">قیمت ها</Link>
+                                <a href="/#priceOfProducts" className=" text-[1rem] hover:text-[#FF9C35]">قیمت ها</a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">ویژگی ها </Link>
+                                <a href="/#properties" className=" text-[1rem] hover:text-[#FF9C35]">ویژگی ها </a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <BsFillDiamondFill className='text-[#FF9C35] text-[0.4rem]'/>
-                                <Link href="/" className=" text-[1rem] hover:text-[#FF9C35]">شرایط و قوانین</Link>
+                                <Link href="/rules" className=" text-[1rem] hover:text-[#FF9C35]">شرایط و قوانین</Link>
                             </div>
                         </div>
                     </div>

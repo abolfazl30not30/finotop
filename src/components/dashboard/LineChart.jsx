@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function LineChart() {
   return (
-    <div className='bg-white rounded-2xl px-4'>
-        <div className='flex flex-col justify-center space-y-3'>
+    <div className='bg-white rounded-2xl px-4 '>
+        <div className='flex flex-col justify-center space-y-3 '>
             <div >
                 <button onClick={""} className='bg-[#367AFF] rounded-2xl px-4 py-1.5 font-semibold text-sm  my-3 w-max text-white hover:bg-[#401fac]' >
                     ورود به مگاچارت
