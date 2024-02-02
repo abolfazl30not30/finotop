@@ -10,6 +10,7 @@ import Properties from "@/components/home/Properties";
 import PriceOfProduct from "@/components/home/PriceOfProduct";
 
 export default function Home() {
+
   return (
     <>
       <Header />
