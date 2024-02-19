@@ -16,7 +16,7 @@ export default function Notes() {
         </div>
         <div className='grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-between xl:gap-3 md:gap-2 gap-6  sm:mx-0 mx-24'>
         <div className='flex flex-col justify-center items-center rounded-2xl shadow-[0px_2px_10px_0px] shadow-[#b6b6b640] space-y-6 sm:px-10 px-2 py-6'>
-        <div className='sm:w-1/2 w-[30%] xl:w-1/3 bg-[#ff9c3524] flex justify-center items-center p-3 rounded-full'>
+        <div className='sm:w-1/2 w-[30%] xl:w-1/3 bg-[#F8F8F8] flex justify-center items-center p-3 rounded-full'>
             <Image className='w-full' src={"/images/Capa_9.svg"} height={0} width={0} alt='note'/>
         </div>
         <div>
@@ -44,7 +44,7 @@ export default function Notes() {
 
     </div>
     <div className='flex flex-col justify-center items-center rounded-2xl shadow-[0px_2px_10px_0px] shadow-[#b6b6b640] space-y-6 sm:px-10 px-2 py-6'>
-        <div className='sm:w-3/5 w-1/3 xl:w-1/3 bg-[#ff9c3524] flex justify-center items-center p-0.5 rounded-full'>
+        <div className='sm:w-3/5 w-1/3 xl:w-1/3 bg-[#F8F8F8] flex justify-center items-center p-0.5 rounded-full'>
             <Image className='w-full' src={"/images/icon_4408728_edited 3.svg"} height={0} width={0} alt='note'/>
         </div>
         <div>
@@ -72,7 +72,7 @@ export default function Notes() {
 
     </div>
     <div className='flex flex-col justify-center items-center rounded-2xl shadow-[0px_2px_10px_0px] shadow-[#b6b6b640] space-y-6 sm:px-10  px-2 py-6'>
-        <div className='sm:w-1/2 w-1/3 xl:w-1/3 bg-[#ff9c3524] flex justify-center items-center p-3 rounded-full'>
+        <div className='sm:w-1/2 w-1/3 xl:w-1/3 bg-[#F8F8F8] flex justify-center items-center p-3 rounded-full'>
             <Image className='w-full' src={"/images/sticker 2.svg"} height={0} width={0} alt='note'/>
         </div>
         <div>
@@ -100,7 +100,7 @@ export default function Notes() {
 
     </div>
     <div className='flex flex-col justify-center items-center rounded-2xl shadow-[0px_2px_10px_0px] shadow-[#b6b6b640] space-y-6 xl:px-10 sm:px-8 px-2 py-6'>
-        <div className='sm:w-2/5 w-[30%] xl:w-1/3 bg-[#ff9c3524] flex justify-center items-center p-3 rounded-full'>
+        <div className='sm:w-2/5 w-[30%] xl:w-1/3 bg-[#F8F8F8] flex justify-center items-center p-3 rounded-full'>
             <Image className='w-full' src={"/images/Layer_8.svg"} height={0} width={0} alt='note'/>
         </div>
         <div>

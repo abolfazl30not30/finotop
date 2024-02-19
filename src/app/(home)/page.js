@@ -17,9 +17,8 @@ export default function Home() {
       <MarketSummary />
       <Products />
       <Tools />
-
       <Notes />
-      <Contact />
+      {/*<Contact />*/}
       <Properties />
       <PriceOfProduct />
     </>

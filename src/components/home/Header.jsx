@@ -6,6 +6,7 @@ export default function Header() {
   const createDataHandler = () => {
     console.log("createDataHandler")
   }
+
   return (
     <div className='bgHeader'>
       <div className='2xl:px-[10rem]   xl:px-[6rem] lg:px-[4rem] md:px-[3rem] 2xl:py-[6rem] xl:py-[5rem] lg:py-[3rem] md:py-[2rem] p-[3rem] flex flex-col md:items-start items-center text-center md:bg-right bg-center  gap-12 bgTextHeader'>
@@ -63,7 +64,7 @@ export default function Header() {
       </div>
       <div className='flex justify-center md:hidden'>
       <div className='sm:w-3/4 w-11/12 mx-2'>
-        <Image className='w-full' src={"/images/Group\ 594.svg"} width={0} height={0}/>
+        <Image className='w-full' src={"/images/banner.svg"} width={0} height={0}/>
       </div>
       </div>
     </div>
