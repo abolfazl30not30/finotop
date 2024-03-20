@@ -5,7 +5,7 @@ import {AiOutlinePlusCircle} from "react-icons/ai"
 import SwitchSelector from "react-switch-selector";
 import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeSymbolSearch } from '@/store/slices/symbolSearchSlice';
+import { changeSymbolSearch } from '@/redux/slices/symbolSearchSlice';
 
 
    

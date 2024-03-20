@@ -2,7 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useDispatch, useSelector } from 'react-redux';
-import { changeTimeCandleSlice } from '@/store/slices/timeCandleChartSlice';
+import { changeTimeCandleSlice } from '@/redux/slices/timeCandleChartSlice';
 import DayCandle from './candle/DayCandle';
 import WeekCandle from './candle/WeekCandle';
 import MonthCandle from './candle/MonthCandle';

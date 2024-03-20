@@ -12,7 +12,7 @@ import MegaHolder from '../Products/MegaHolder';
 import SafeBox from '../Products/SafeBox';
 import Scriner from '../Products/Scriner';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeProduct } from '@/store/slices/productSlice';
+import { changeProduct } from '@/redux/slices/productSlice';
 
 
 

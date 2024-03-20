@@ -15,7 +15,7 @@ export default function Footer() {
     return (
         <footer className='mt-24 bg-[#0141AC] '>
             <div className="flex flex-col md:flex-row gap-16 py-10">
-                <div className="w-full md:w-2/3 mx-10">
+                <div className="md:w-2/3 mx-10">
                     <div
                         className='flex md:flex-row flex-col items-center justify-between gap-12 text-white'>
                         <div className=''>
@@ -119,7 +119,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="text-white w-full md:w-1/3">
+                <div className="mx-10 text-white w-full md:w-1/3">
                     <h3 className=" font-bold 2xl:mt-0 mt-8 ">راه ارتباطی با ما</h3>
                     <div className="mt-5  space-y-6">
                         <div className='flex items-center gap-1 '>

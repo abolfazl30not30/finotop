@@ -2,7 +2,7 @@
 import React from 'react'
 import {BiSolidChevronLeft} from "react-icons/bi"
 import { useDispatch, useSelector } from 'react-redux';
-import { changeDropDown } from '@/store/slices/dropdownSlice';
+import { changeDropDown } from '@/redux/slices/dropdownSlice';
 
 
 
