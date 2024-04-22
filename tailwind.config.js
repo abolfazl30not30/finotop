@@ -14,6 +14,7 @@ module.exports = {
       },
       colors:{
         mainBlue:"#0141AC",
+        mainOrange:"#fc9324",
         sideBlue:"#367AFF",
         textGreen:"#40c79a"
       }

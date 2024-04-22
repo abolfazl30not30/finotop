@@ -231,7 +231,7 @@ export default function MarketSummary() {
                     </Link>
                 </div>
                 <div className="mx-5 mt-2">
-                    <div className='flex gap-5'>
+                    <div className='flex flex-wrap gap-5'>
                         <div>
                             <button
                                 className='bg-[#367AFF] text-white rounded-2xl px-8 py-2 font-semibold text-sm  my-3 text-center   hover:bg-[#367AFF] hover:text-white border border-[#EDEDED] w-full'
@@ -267,7 +267,7 @@ export default function MarketSummary() {
                             </button>
                         </div>
                     </div>
-                    <div className="flex gap-5 mt-5">
+                    <div className="flex flex-wrap gap-5 mt-5">
                         <div>
                             <button
                                 className='flex items-center gap-5 bg-[#F8F8F8] px-4 rounded-2xl py-3 text-[#777] w-full' onClick={""}>

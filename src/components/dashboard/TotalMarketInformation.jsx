@@ -158,8 +158,8 @@ export default function TotalMarketInformation() {
     <div className='bg-white rounded-2xl '>
         <div className='flex flex-col items-center justify-center items-center mx-4  space-y-3'>
             <div className='w-full'>
-                <div className="">
-                    <table className="w-full text-sm text-center border-spacing-y-3 border-separate">
+                <div className="overflow-x-auto">
+                    <table className="w-full text-sm text-center border-spacing-y-3 border-separate table-auto overflow-scroll">
                         <thead className="text-sm text-white font-semibold ">
                             <tr className='bg-[#367AFF] '>
                                 <th scope="col" className="px-6 py-3 rounded-r-2xl">

@@ -1,11 +1,20 @@
 import React from 'react'
 import {BiUser} from "react-icons/bi"
+import {BsList} from "react-icons/bs";
 
 export default function Header() {
+    const toggleSidebar = () => {
+        let sidebar = document.querySelector("#sidebar");
+        sidebar.classList.toggle("close");
+    }
   return (
     <div className='flex justify-between items-center gap-4 mx-4 mb-4 '>
-        <form className="">   
-            
+        <div className="block md:hidden">
+            <button className='btn ms-3 text-2xl' onClick={toggleSidebar}>
+                <BsList/>
+            </button>
+        </div>
+        <form className="">
             <div className="relative flex  justify-center items-center ">
                 <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label> 
                 <input type="search" id="default-search" className="block w-full py-2 pl-4  pr-12 text-sm text-gray-900 placeholder:text-[#777] rounded-full bg-white" placeholder="جستجوی نماد ..." />

@@ -1,7 +1,32 @@
-import React from 'react'
+"use client"
+import React, {useEffect, useState} from 'react'
 import {FirstLineChart} from "@/components/dashboard/charts/FirstLineChart";
+import {useGetFirstChartDataQuery} from "@/redux/features/firstChart/firstChartSlice";
+import axios from "axios";
 
 export default function LineChart() {
+    const [type,setType] = useState("Q1")
+    // const {
+    //     data: data = {},
+    //     isLoading: isLoadingChart,
+    //     isError: isErrorChart,
+    // } = useGetFirstChartDataQuery(type);
+    //console.log(data)
+    useEffect(()=>{
+        axios.get('http://193.111.234.168:3030/api/g/mw?action=Qtc&from=20240419111002&insID=Q1')
+            .then(function (response) {
+                // handle success
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+    },[])
+
 
     const initialData = [
         { time: '2018-10-19', value: 35.98 },
@@ -160,42 +185,42 @@ export default function LineChart() {
     <div className='bg-white rounded-2xl px-4 '>
         <div className='flex flex-col justify-center space-y-3 '>
             <div >
-                <button onClick={""} className='bg-[#367AFF] rounded-2xl px-4 py-1.5 font-semibold text-sm  my-3 w-max text-white hover:bg-[#401fac]' >
+                <button className={`bg-[#367AFF]  rounded-2xl px-4 py-1.5 font-semibold text-sm  my-3 w-max text-white hover:bg-[#401fac]`} >
                     ورود به مگاچارت
                 </button>
             </div>
             <div className='flex justify-center items-center'>
                 <FirstLineChart  data={initialData}/>
             </div>
-            <div className='grid grid-cols-3 gap-x-2 '>
-                <div >
-                    <button className='bg-[#F8F8F8] rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full' onClick={""} >
-                        ورود و خروج به بازار  
+            <div className='grid grid-cols-2 md:grid-cols-3 gap-x-2 '>
+                <div>
+                    <button  className={`${type === "Q1" ? ("bg-[#0141AC] text-white "):("bg-[#F8F8F8]")} rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full`} onClick={()=>{setType("Q1")}} >
+                        ارزش معاملات بورس
                     </button>
                 </div>
                 <div >
-                    <button className='bg-[#F8F8F8] rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full' onClick={""} >
-                         فرابورس 
+                    <button className={`${type === "Q3" ? ("bg-[#0141AC] text-white "):("bg-[#F8F8F8]")} rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full`} onClick={()=>{setType("Q3")}} >
+                        ارزش معاملات فرابورس
                     </button>
                 </div>
                 <div >
-                    <button className='bg-[#F8F8F8] rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full' onClick={""} >
-                         دلار 
+                    <button className={`${type === "T1" ? ("bg-[#0141AC] text-white "):("bg-[#F8F8F8]")} rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full`} onClick={()=>{setType("T1")}} >
+                         صندوق های بورسی
                     </button>
                 </div>
                 <div >
-                    <button className='bg-[#F8F8F8] rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full' onClick={""} >
-                        ارزش   
+                    <button className={`${type === "T3" ? ("bg-[#0141AC] text-white "):("bg-[#F8F8F8]")} rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full`} onClick={()=>{setType("T3")}} >
+                        صندوق های فرابورسی
                     </button>
                 </div>
                 <div >
-                    <button className='bg-[#F8F8F8] rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full' onClick={""} >
-                         ارزش بازار به ... 
+                    <button className={`${type === "TR" ? ("bg-[#0141AC] text-white "):("bg-[#F8F8F8]")} rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full`} onClick={()=>{setType("TK")}} >
+                        صندوق های کالایی
                     </button>
                 </div>
                 <div >
-                    <button className='bg-[#F8F8F8] rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full' onClick={""} >
-                          شاخص کل
+                    <button className={`${type === "Q9" ? ("bg-[#0141AC] text-white "):("bg-[#F8F8F8]")} rounded-2xl px-4 py-2 font-semibold text-sm  my-3 text-center  text-[#777] hover:bg-[#0141AC] hover:text-white border border-[#EDEDED] w-full`} onClick={()=>{setType("Q9")}} >
+                          اختیار خرید
                     </button>
                 </div>
             </div>

@@ -11,10 +11,11 @@ export default function SymbolInformation() {
   const handleChangeRowCount = (event) => {
     setRow(event.target.value);
   };
+
   return (
-    <div className='bg-[#FFF] rounded-2xl p-4 cartShadow'>
+    <div className='w-full bg-[#FFF] rounded-2xl p-4 cartShadow'>
         <div className=' flex flex-col  justify-center space-y-3 '>
-            <div className='flex justify-around px-2 py-3 items-center text-[#777] bg-[#F8F8F8] rounded-3xl'>
+            <div className='flex justify-around flex-wrap px-2 py-3 items-center text-[#777] bg-[#F8F8F8] rounded-3xl'>
                 <div  className='flex justify-center gap-2 items-center'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
                         <circle cx="5" cy="5" r="5" fill="#2BC42C"/>
@@ -70,59 +71,57 @@ export default function SymbolInformation() {
                     </p>
                 </div>
                 
-                <div >
-                    <FormControl sx={{backgroundColor:"rgba(54, 122, 255, 0.56)",borderRadius:2,borderColor:"rgba(255,255,255,1)",outlineColor:"rgba(255,255,255,1)",padding:0, }}>
-                        <Select
-                        value={row}
-                        onChange={handleChangeRowCount}
-                        displayEmpty
-                        
-                        >
-                        <MenuItem value="">
-                            تعداد ردیف
-                        </MenuItem>
-                        <MenuItem value={10}>10 ردیف</MenuItem>
-                        <MenuItem value={20}>20 ردیف</MenuItem>
-                        <MenuItem value={30}>30 ردیف</MenuItem>
-                        </Select>
-                        
-                    </FormControl>
-                </div>
-                
-
+                {/*<div >*/}
+                {/*    <FormControl sx={{backgroundColor:"rgba(54, 122, 255, 0.56)",borderRadius:2,borderColor:"rgba(255,255,255,1)",outlineColor:"rgba(255,255,255,1)",padding:0, }}>*/}
+                {/*        <Select*/}
+                {/*        value={row}*/}
+                {/*        onChange={handleChangeRowCount}*/}
+                {/*        displayEmpty*/}
+                {/*        */}
+                {/*        >*/}
+                {/*        <MenuItem value="">*/}
+                {/*            تعداد ردیف*/}
+                {/*        </MenuItem>*/}
+                {/*        <MenuItem value={10}>10 ردیف</MenuItem>*/}
+                {/*        <MenuItem value={20}>20 ردیف</MenuItem>*/}
+                {/*        <MenuItem value={30}>30 ردیف</MenuItem>*/}
+                {/*        </Select>*/}
+                {/*        */}
+                {/*    </FormControl>*/}
+                {/*</div>*/}
             </div>
-            <div>
+            <div className="font-bold mx-5">
                 حجم تقاضا
             </div>
-            <div className='flex justify-between px-4 gap-3 items-center'>
+            <div className='flex justify-between px-1 md:px-3 md:px-3 gap-3 items-center'>
                 <div className='w-1/2'>
                 <table className="w-full text-sm text-center border-spacing-y-3 border-separate">
-                    <thead className="text-sm text-white font-semibold ">
+                    <thead className="text-[0.7rem] md:text-sm text-white font-semibold ">
                         <tr className='text-[#0141AC]  border border-[#D3B9DC] '>
-                            <th scope="col" className="px-4 py-3 rounded-r-2xl border-y border-r border-[#D3B9DC] ">
+                            <th scope="col" className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl border-y border-r border-[#D3B9DC] ">
                                   تعداد
                             </th>
                             
-                            <th scope="col" className="px-4 py-3 border-y border-[#D3B9DC]">
+                            <th scope="col" className="px-1 md:px-3 md:px-3 py-3 border-y border-[#D3B9DC]">
                                  حجم خرید
                             </th>
-                            <th scope="col" className="px-4 py-3 rounded-l-2xl border-y border-l border-[#D3B9DC] ">
+                            <th scope="col" className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl border-y border-l border-[#D3B9DC] ">
                                   قیمت
                             </th>
                         </tr>
                     </thead>
-                    <tbody className='text-[#777] text-sm font-bold '>
+                    <tbody className='text-[#777] text-[0.7rem] md:text-sm font-bold '>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className="  px-4  ">
+                            <td className="  px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#2bc42c8f] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -132,16 +131,16 @@ export default function SymbolInformation() {
                             </td>
                         </tr>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className="  px-4  ">
+                            <td className="  px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#2bc42c8f] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -151,16 +150,16 @@ export default function SymbolInformation() {
                             </td>
                         </tr>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className="  px-4  ">
+                            <td className="  px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#2bc42c8f] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -170,16 +169,16 @@ export default function SymbolInformation() {
                             </td>
                         </tr>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className="  px-4  ">
+                            <td className="  px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#2bc42c8f] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -189,16 +188,16 @@ export default function SymbolInformation() {
                             </td>
                         </tr>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className="  px-4  ">
+                            <td className="  px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#2bc42c8f] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -207,41 +206,37 @@ export default function SymbolInformation() {
                                  </p>
                             </td>
                         </tr>
-                        
-                        
-                        
-                        
                     </tbody>
                 </table>
 
                 </div>
                 <div className='w-1/2'>
                 <table className="w-full text-sm text-center border-spacing-y-3 border-separate">
-                    <thead className="text-sm text-white font-semibold ">
+                    <thead className="text-[0.7rem] md:text-sm text-white font-semibold ">
                         <tr className='text-[#0141AC] border border-[#D3B9DC] '>
-                            <th scope="col" className="px-4 py-3 rounded-r-2xl border-y border-r border-[#D3B9DC] ">
+                            <th scope="col" className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl border-y border-r border-[#D3B9DC] ">
                                   تعداد
                             </th>
-                            <th scope="col" className="px-4 py-3 border-y border-[#D3B9DC]">
+                            <th scope="col" className="px-1 md:px-3 md:px-3 py-3 border-y border-[#D3B9DC]">
                                   حجم خرید
                             </th>
-                            <th scope="col" className="px-4 py-3 rounded-l-2xl border-y border-l border-[#D3B9DC] ">
+                            <th scope="col" className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl border-y border-l border-[#D3B9DC] ">
                                   قیمت
                             </th>
                         </tr>
                     </thead>
-                    <tbody className='text-[#777] text-sm '>
+                    <tbody className='text-[#777] text-[0.7rem] md:text-sm '>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className="  px-4  ">
+                            <td className="  px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#d649379e] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -251,16 +246,16 @@ export default function SymbolInformation() {
                             </td>
                         </tr>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className=" px-4  ">
+                            <td className=" px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#d649379e] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -270,16 +265,16 @@ export default function SymbolInformation() {
                             </td>
                         </tr>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className="  px-4  ">
+                            <td className="  px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#d649379e] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -289,16 +284,16 @@ export default function SymbolInformation() {
                             </td>
                         </tr>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className="  px-4  ">
+                            <td className="  px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#d649379e] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -308,16 +303,16 @@ export default function SymbolInformation() {
                             </td>
                         </tr>
                         <tr className="bg-[#F8F8F8] ">
-                            <td className="px-4 py-3 rounded-r-2xl">
+                            <td className="px-1 md:px-3 md:px-3 py-3 rounded-r-2xl">
                                 5
                             </td>
                             
-                            <td className="  px-4  ">
+                            <td className="  px-1 md:px-3 md:px-3  ">
                                 <p className='bg-[#d649379e] rounded px-2 py-1'>
                                     178,993
                                 </p>
                             </td>
-                            <td dir='ltr' className="px-4 py-3 rounded-l-2xl">
+                            <td dir='ltr' className="px-1 md:px-3 md:px-3 py-3 rounded-l-2xl">
                                  <p>
                                     24
                                  </p>
@@ -326,10 +321,6 @@ export default function SymbolInformation() {
                                  </p>
                             </td>
                         </tr>
-                        
-                        
-                        
-                        
                     </tbody>
                 </table>
 

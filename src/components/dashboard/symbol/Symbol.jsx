@@ -6,11 +6,11 @@ import SymbolInformation from './SymbolInformation'
 export default function Symbol() {
   return (
     <div className='flex flex-col '>
-        <div className='flex justify-between gap-3 m-4'>
-            <div className='space-y-4 w-3/5'>
+        <div className='flex justify-between flex-col md:flex-row gap-3 md:m-4'>
+            <div className='space-y-4 w-full md:w-3/5'>
                 <SymbolInformation/>
             </div>
-            <div className='space-y-4 w-2/5'>
+            <div className='space-y-4 w-full md:w-2/5'>
                 <Candle/>
                 <Line/>
             </div>

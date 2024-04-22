@@ -11,9 +11,9 @@ export default function TableSummary() {
     const dispatch=useDispatch()
   return (
     <div className='bg-white rounded-2xl px-4 py-3'>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between flex-col md:flex-row items-center'>
             <div className=''>
-                <div className='flex flex-col justify-between space-y-3 '>
+                <div className='flex flex-col justify-between space-y-3 p-12 '>
                     <div className=' flex justify-center items-center gap-2'>
                         <div className='w-full'>
                             <button onClick={()=>dropdown==="openSafeBox" ? dispatch(changeDropDown("close")) : dispatch(changeDropDown("openSafeBox"))} className={dropdown === "openSafeBox" ? "w-[120%] flex justify-between items-center  p-2 bg-[#0141AC]  text-white border border-[#F1F1F1] rounded-3xl gap-8" : "w-full flex justify-between items-center  bg-[#367AFF] text-white p-2  border border-[#F1F1F1] rounded-3xl gap-4 "  }>
@@ -113,8 +113,8 @@ export default function TableSummary() {
                     
                 </div>
             </div>
-            <div className='w-3/5'>
-                <table className="w-full text-sm text-center border-spacing-y-3 border-separate">
+            <div className='w-full md:w-3/5 overflow-x-auto'>
+                <table className="w-full text-sm text-center border-spacing-y-3 border-separate table-auto overflow-scroll">
                     <thead className="text-sm text-white font-semibold ">
                         <tr className='text-[#0141AC] border border-[#D3B9DC] '>
                             <th scope="col" className="px-6 py-3 rounded-r-2xl border-y border-r border-[#D3B9DC] ">

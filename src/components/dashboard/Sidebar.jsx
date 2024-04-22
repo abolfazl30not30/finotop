@@ -9,12 +9,18 @@ import {TiChartLine} from "react-icons/ti"
 import {CgClose} from "react-icons/cg"
 import '../../style/dashboard/dashboard.css'
 export default function Sidebar() {
-   
+
+    const closeSidebar = () => {
+        if(window.innerWidth <= 768){
+            let sidebar = document.querySelector("#sidebar");
+            sidebar.classList.toggle("close");
+        }
+    }
 
     return (
         <>
             <div className='sidebar-dashboard' id='sidebar'>
-                <div id='close_sidebar_mobile' >
+                <div id='close_sidebar_mobile'  onClick={closeSidebar}>
                     <CgClose className="mx-6 text-xl"/>
                 </div>
                 <div className="logo my-4 mx-2">

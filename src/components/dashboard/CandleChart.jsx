@@ -156,8 +156,8 @@ export default function CandleChart() {
     ];
   return (
     <div className='bg-white rounded-2xl py-3 px-4'>
-        <div className='flex  justify-between gap-2'>
-            <div className='flex flex-col items-center justify-center gap-2 py-8'>
+        <div className='flex  justify-between flex-col md:flex-row gap-2'>
+            <div className='flex flex-row md:flex-col items-center justify-center gap-2 py-8'>
                 <div >
                     <button className='bg-[#F8F8F8] text-[#0141AC] rounded-lg border border-[#EDEDED] hover:bg-[#0141AC] hover:text-white py-6 font-semibold px-2'>
                         حقیقی
@@ -173,11 +173,10 @@ export default function CandleChart() {
                 <div className=''>
                     <FirstLineChart  data={initialData}/>
                 </div>
-                <div className='flex justify-between items-center gap-2 text-[#777]'>
+                <div className='flex justify-around flex-wrap items-center gap-2 text-[#777]'>
                     <div >
                         <button className='bg-[#F8F8F8] flex justif-center items-center border border-[#EDEDED] rounded-2xl  px-8 py-1.5 hover:bg-[#0141AC] hover:text-white'>
                             سرانه
-
                         </button>
                     </div>
                     <div >

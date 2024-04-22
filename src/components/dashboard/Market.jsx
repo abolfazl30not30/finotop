@@ -10,8 +10,8 @@ import TableSummary from './TableSummary'
 
 export default function Market() {
   return (
-    <div className='flex flex-col '>
-        <div className='flex justify-between gap-3 m-4'>
+    <div className='flex flex-col'>
+        <div className='flex justify-between flex-col md:flex-row gap-3 md:m-4'>
             <div className='space-y-4'>
                 <LineChart/>
                 <CandleChart/>

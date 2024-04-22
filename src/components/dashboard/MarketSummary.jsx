@@ -3,7 +3,7 @@ import React from 'react'
 export default function MarketSummary() {
   return (
     <div className='bg-white rounded-2xl p-4'>
-        <div className='flex flex-col space-y-4 justify-center items-center text-center'>
+        <div className='w-full flex flex-col space-y-4 justify-center items-center text-center'>
             <div className='bg-[#367AFF] w-full rounded-2xl px-4 py-2 font-bold text-white text-lg'>
                 <p className=''>
                     در یک نگاه
@@ -51,8 +51,8 @@ export default function MarketSummary() {
                     </button>
                 </div>
             </div>
-            <div>
-                <table className="w-full text-sm text-center border-spacing-y-3 border-separate">
+            <div className='w-full overflow-x-auto'>
+                <table className="w-full text-sm text-center border-spacing-y-3 border-separate table-auto overflow-scroll">
                     <thead className="text-sm text-white font-semibold ">
                         <tr className='text-[#0141AC] border border-[#D3B9DC] '>
                             <th scope="col" className="px-6 py-3 rounded-r-2xl border-y border-r border-[#D3B9DC] ">

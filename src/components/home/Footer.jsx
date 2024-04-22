@@ -119,7 +119,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="mx-10 text-white w-full md:w-1/3">
+                <div className="mx-10 text-white">
                     <h3 className=" font-bold 2xl:mt-0 mt-8 ">راه ارتباطی با ما</h3>
                     <div className="mt-5  space-y-6">
                         <div className='flex items-center gap-1 '>

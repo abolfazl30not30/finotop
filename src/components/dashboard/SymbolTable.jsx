@@ -20,10 +20,7 @@ export default function SymbolTable() {
     }
     
     const symbolRef=useRef(null)
-    
-    
-    
-   
+
     const options = [
         {
           label: "50",
@@ -47,8 +44,8 @@ export default function SymbolTable() {
       const initialSelectedIndex = options.findIndex(({ value }) => value === "bar");
   return (
     <div className='bg-white rounded-2xl px-4 py-3'>
-        <div className='flex justify-between  gap-2'>
-            <div className='space-y-8 w-1/4'>
+        <div className='flex justify-between flex-col md:flex-row  gap-2'>
+            <div className='space-y-8'>
                <div className='flex gap-2 items-center'>
                 <div className='text-[#0141AC] font-bold'>
                     <p>
@@ -107,8 +104,8 @@ export default function SymbolTable() {
                </div>
 
             </div>
-            <div className='w-3/5'>
-                <table className="w-full text-sm text-center border-spacing-y-3 border-separate">
+            <div className='w-full md:w-3/5 overflow-x-auto'>
+                <table className="w-full text-sm text-center border-spacing-y-3 border-separate table-auto overflow-scroll">
                     <thead className="text-sm text-white font-semibold ">
                         <tr className='text-[#0141AC] border border-[#D3B9DC] '>
                             <th scope="col" className="px-6 py-3 rounded-r-2xl border-y border-r border-[#D3B9DC] ">
@@ -196,10 +193,6 @@ export default function SymbolTable() {
                                  1402/01/0 - 1402/06/31
                             </td>
                         </tr>
-                        
-                        
-                        
-                        
                     </tbody>
                 </table>
 

@@ -32,6 +32,7 @@ export const MarketSummeryChart = (props) => {
                         color: '#f0f3fa',
                     },
                 },
+                width:window.innerWidth/1.5,
                 height: 300,
             });
             chart.timeScale().fitContent();

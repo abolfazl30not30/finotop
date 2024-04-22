@@ -32,7 +32,7 @@ export const FirstLineChart = (props) => {
                         color: '#f0f3fa',
                     },
                 },
-                width: 500,
+                width: window.innerWidth < 768 ? (window.innerWidth/1.2) : (window.innerWidth/3),
                 height: 250,
             });
             chart.timeScale().fitContent();
